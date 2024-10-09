@@ -1,0 +1,24 @@
+declare const _default: {
+    /**
+     * Dangerous overrides, use only if you know what you are doing
+     */
+    /**
+     * Overrides applicationId from Android project, setting this option will also
+     * ignore failures when parsing build.gradle.
+     */
+    overrideAndroidApplicationId: string | undefined;
+    /**
+     * Overrides bundleIdentifier from Xcode project for bare workflow.
+     * Setting this option will ignore failures thrown when bundle identifier can't be obtained from Xcode project.
+     */
+    overrideIosBundleIdentifier: string | undefined;
+    /**
+     * Comma separated list of feature gate keys of feature gates to evaluate override to true.
+     */
+    featureGateEnable: string | undefined;
+    /**
+     * Comma separated list of feature gate keys of feature gates to evaluate override to false.
+     */
+    featureGateDisable: string | undefined;
+};
+export default _default;

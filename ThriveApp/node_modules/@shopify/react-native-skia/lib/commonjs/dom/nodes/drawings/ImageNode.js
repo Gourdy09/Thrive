@@ -1,0 +1,71 @@
+"use strict";
+
+Object.defineProperty(exports, "__esModule", {
+  value: true
+});
+exports.ImageNode = void 0;
+var _types = require("../../types");
+var _datatypes = require("../datatypes");
+var _DrawingNode = require("../DrawingNode");
+class ImageNode extends _DrawingNode.JsiDrawingNode {
+  constructor(ctx, props) {
+    super(ctx, _types.NodeType.Image, props);
+  }
+  deriveProps() {
+    var _this$props$fit;
+    const {
+      image
+    } = this.props;
+    if (!image) {
+      return {
+        src: {
+          x: 0,
+          y: 0,
+          width: 0,
+          height: 0
+        },
+        dst: {
+          x: 0,
+          y: 0,
+          width: 0,
+          height: 0
+        }
+      };
+    }
+    const fit = (_this$props$fit = this.props.fit) !== null && _this$props$fit !== void 0 ? _this$props$fit : "contain";
+    const rect = (0, _datatypes.processRect)(this.Skia, this.props);
+    const {
+      src,
+      dst
+    } = (0, _datatypes.fitRects)(fit, {
+      x: 0,
+      y: 0,
+      width: image.width(),
+      height: image.height()
+    }, rect);
+    return {
+      src,
+      dst
+    };
+  }
+  draw({
+    canvas,
+    paint
+  }) {
+    const {
+      image
+    } = this.props;
+    if (!this.derived) {
+      throw new Error("ImageNode: src and dst are undefined");
+    }
+    const {
+      src,
+      dst
+    } = this.derived;
+    if (image) {
+      canvas.drawImageRect(image, src, dst, paint);
+    }
+  }
+}
+exports.ImageNode = ImageNode;
+//# sourceMappingURL=ImageNode.js.map

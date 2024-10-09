@@ -1,0 +1,1 @@
+{"version":3,"names":["SkiaDomView","SkiaJSDomView"],"sources":["SkiaJSDomView.web.tsx"],"sourcesContent":["export { SkiaDomView as SkiaJSDomView } from \"./SkiaDomView\";\n"],"mappings":"AAAA,SAASA,WAAW,IAAIC,aAAa,QAAQ,eAAe"}

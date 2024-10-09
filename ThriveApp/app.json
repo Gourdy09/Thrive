@@ -1,0 +1,38 @@
+{
+  "expo": {
+    "name": "Thrive",
+    "owner": "ompatel08",
+    "scheme": "thrive",
+    "slug": "thrive",
+    "version": "1.0.0",
+    "orientation": "portrait",
+    "icon": "./assets/images/AppIcon.png",
+    "userInterfaceStyle": "dark",
+    "splash": {
+      "backgroundColor": "#181A1B",
+      "image": "./assets/images/Logo.png"
+    },
+    "ios": {
+      "supportsTablet": false
+    },
+    "android": {
+      "adaptiveIcon": {
+        "foregroundImage": "./assets/images/Logo.png",
+        "backgroundColor": "#ffffff"
+      },
+      "package": "com.ompatel08.thrive"
+    },
+    "web": {
+      "favicon": "./assets/images/Logo.png"
+    },
+    "plugins": [
+      "expo-router",
+      "expo-font"
+    ],
+    "extra": {
+      "eas": {
+        "projectId": "f8731acd-57e0-46c6-8101-ab1265823e27"
+      }
+    }
+  }
+}

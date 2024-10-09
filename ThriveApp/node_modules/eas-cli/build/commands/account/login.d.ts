@@ -1,0 +1,13 @@
+import EasCommand from '../../commandUtils/EasCommand';
+export default class AccountLogin extends EasCommand {
+    static description: string;
+    static aliases: string[];
+    static flags: {
+        sso: import("@oclif/core/lib/interfaces").BooleanFlag<boolean>;
+    };
+    static contextDefinition: {
+        sessionManager: import("../../commandUtils/context/SessionManagementContextField").default;
+        maybeLoggedIn: import("../../commandUtils/context/MaybeLoggedInContextField").default;
+    };
+    runAsync(): Promise<void>;
+}

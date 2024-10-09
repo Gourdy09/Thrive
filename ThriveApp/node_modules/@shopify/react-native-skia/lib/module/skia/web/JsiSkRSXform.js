@@ -1,0 +1,37 @@
+function _defineProperty(obj, key, value) { key = _toPropertyKey(key); if (key in obj) { Object.defineProperty(obj, key, { value: value, enumerable: true, configurable: true, writable: true }); } else { obj[key] = value; } return obj; }
+function _toPropertyKey(t) { var i = _toPrimitive(t, "string"); return "symbol" == typeof i ? i : String(i); }
+function _toPrimitive(t, r) { if ("object" != typeof t || !t) return t; var e = t[Symbol.toPrimitive]; if (void 0 !== e) { var i = e.call(t, r || "default"); if ("object" != typeof i) return i; throw new TypeError("@@toPrimitive must return a primitive value."); } return ("string" === r ? String : Number)(t); }
+import { BaseHostObject } from "./Host";
+export class JsiSkRSXform extends BaseHostObject {
+  static fromValue(rsxform) {
+    if (rsxform instanceof JsiSkRSXform) {
+      return rsxform.ref;
+    }
+    return Float32Array.of(rsxform.scos, rsxform.ssin, rsxform.tx, rsxform.ty);
+  }
+  constructor(CanvasKit, ref) {
+    super(CanvasKit, ref, "RSXform");
+    _defineProperty(this, "dispose", () => {
+      // nothing to do here, RSXform is a Float32Array
+    });
+  }
+  set(scos, ssin, tx, ty) {
+    this.ref[0] = scos;
+    this.ref[1] = ssin;
+    this.ref[2] = tx;
+    this.ref[3] = ty;
+  }
+  get scos() {
+    return this.ref[0];
+  }
+  get ssin() {
+    return this.ref[1];
+  }
+  get tx() {
+    return this.ref[2];
+  }
+  get ty() {
+    return this.ref[3];
+  }
+}
+//# sourceMappingURL=JsiSkRSXform.js.map

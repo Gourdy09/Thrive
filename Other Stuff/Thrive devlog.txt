@@ -1,0 +1,28 @@
+//DONE
+made a CRUD app while learning fullstack dev with react and appwrite
+decided on react native + nativewind for frontend
+did a color theory/design
+decided on colors (Background - #181A1B, Primary - #FFC400, Secondaries - #F2DE3D, #EDF23D, #F2B23D)
+started working on figma design
+Pages:
+- Home
+- Food
+
+Made logo with sketches
+Made final logo on logo
+
+Created React Project, made components, and set up pages with interactivity
+Collected data for a few weeks and made equations for blood sugar forecasting
+
+//TODO
+figured out how to shift graph upwards to match the y-value for entered data point - done
+fixed up bugs and compiled the app and finished - done
+create and edit video together
+submit project
+
+
+// FUTURE PLANS
+When i learn more about ai, bloodsugar, and collect more data:
+change the statistical regression approach to a more refined, ai approach
+upload ai for people to use
+upgrade the app to use new ai and add new features
