@@ -4,6 +4,7 @@ By: Om Patel
 Congressional App Challenge 2024 Submission
 District: TX-22 (Troy E. Nehls)
 
+![Thrive Cover Image](https://github.com/Gourdy09/Thrive/blob/main/Other%20Stuff/Images/AppCover_CAC.png?raw=true)
 
 # About
 
@@ -20,10 +21,6 @@ While developing Thrive, I faced many challenges. As a first-time app developer,
 ## Improvements For Version 2.0
 
 If I were to create a 2.0 version of my app, I would focus on improving the prediction model by using more data. Right now, the model is based only on my own blood sugar data, which may reduce its accuracy for different demographics. To make improve it, I would collect data from both diabetic and nondiabetic people. This way, the app could better understand a wider range of blood sugar responses. I would build a base model that updates itself based on the specific data from each user. This means that over time, everyone would have a personalized prediction model saved to their account. Alongside this, I would work on enhancing the user experience. By learning more about React Native and design principles, I could improve the app's interface and usability. My goal would be to create a more intuitive and accessible experience for all users.
-
-## Images
-
-
 
 ## Tools Used
 
